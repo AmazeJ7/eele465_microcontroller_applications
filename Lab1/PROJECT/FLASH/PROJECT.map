@@ -1,0 +1,147 @@
+*** EVALUATION ***
+PROGRAM "PROJECT.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.51 Build 14019, Jan 20 2014
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main_asm.obj                            Model: SMALL,         Lang: Assembler
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE034 (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+main_asm__ORG00001                 6   R/W       0x60       0x65   .absSeg0
+main_asm__ORG00002               354     R     0xE000     0xE161   .absSeg1
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg2_vect                     2     R     0xFFE6     0xFFE7   .vectSeg2
+.vectSeg3_vect                     2     R     0xFFFE     0xFFFF   .vectSeg3
+
+Summary of section sizes per section type:
+READ_ONLY (R):         166 (dec:      358)
+READ_WRITE (R/W):       46 (dec:       70)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFE6        0xE06E   interrupt
+     0xFFFE        0xE034   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main_asm.obj --
+- PROCEDURES:
+     runDv                                     E000      16      22       0   .init       
+     runBv                                     E016      10      16       0   .init       
+     runCv                                     E026       E      14       0   .init       
+     _Startup                                  E034      32      50       0   .init       
+     main                                      E034       0       0       0   .init       
+     mainLoop                                  E066       8       8       0   .init       
+     interrupt                                 E06E       A      10       0   .init       
+     toggle                                    E078      1A      26       0   .init       
+     led                                       E092      15      21       0   .init       
+     poll                                      E0A7      27      39       0   .init       
+     runA                                      E0CE      10      16       0   .init       
+     runB                                      E0DE       4       4       0   .init       
+     rB                                        E0E2      28      40       0   .init       
+     runC                                      E10A       4       4       0   .init       
+     rC                                        E10E      28      40       0   .init       
+     runD                                      E136       4       4       0   .init       
+     rD                                        E13A      28      40       0   .init       
+- VARIABLES:
+     value                                       60       1       1       0   .text       
+     runBcount                                   61       1       1       0   .text       
+     runCcount                                   62       1       1       0   .text       
+     runDcount                                   63       1       1       0   .text       
+     ledVal1                                     64       1       1       0   .text       
+     ledVal2                                     65       1       1       0   .text       
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main_asm.obj                                 6    354      0
+  other                                       64      4      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  value runBcount runCcount runDcount ledVal1 ledVal2 
+SECTION: ".init"
+  runDv runBv runCv main _Startup mainLoop interrupt toggle led poll runA runB 
+  rB runC rC runD rD 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     value                                       60       1       1       0   .text       
+     runBcount                                   61       1       1       0   .text       
+     runCcount                                   62       1       1       0   .text       
+     runDcount                                   63       1       1       0   .text       
+     ledVal1                                     64       1       1       0   .text       
+     ledVal2                                     65       1       1       0   .text       
+     runDv                                     E000      16      22       0   .init       
+     runBv                                     E016      10      16       0   .init       
+     runCv                                     E026       E      14       0   .init       
+     main                                      E034       0       0       0   .init       
+     _Startup                                  E034      32      50       0   .init       
+     mainLoop                                  E066       8       8       0   .init       
+     interrupt                                 E06E       A      10       0   .init       
+     toggle                                    E078      1A      26       0   .init       
+     led                                       E092      15      21       0   .init       
+     poll                                      E0A7      27      39       0   .init       
+     runA                                      E0CE      10      16       0   .init       
+     runB                                      E0DE       4       4       0   .init       
+     rB                                        E0E2      28      40       0   .init       
+     runC                                      E10A       4       4       0   .init       
+     rC                                        E10E      28      40       0   .init       
+     runD                                      E136       4       4       0   .init       
+     rD                                        E13A      28      40       0   .init       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+      
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 358
+

@@ -1,0 +1,293 @@
+*** EVALUATION ***
+PROGRAM "Lab5.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.51 Build 14019, Jan 20 2014
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main_asm.obj                            Model: SMALL,         Lang: Assembler
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE000 (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+main_asm__ORG00001                51   R/W       0x60       0x92   .absSeg0
+main_asm__ORG00002              1785     R     0xE000     0xE6F8   .absSeg1
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg2_vect                     2     R     0xFFE6     0xFFE7   .vectSeg2
+.vectSeg3_vect                     2     R     0xFFFE     0xFFFF   .vectSeg3
+
+Summary of section sizes per section type:
+READ_ONLY (R):         6FD (dec:     1789)
+READ_WRITE (R/W):       73 (dec:      115)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFE6        0xE042   interrupt
+     0xFFFE        0xE000   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main_asm.obj --
+- PROCEDURES:
+     _Startup                                  E000      31      49       0   .init       
+     main                                      E000       0       0       0   .init       
+     mainLoop                                  E031      11      17       0   .init       
+     interrupt                                 E042       A      10       0   .init       
+     toggle                                    E04C       B      11       0   .init       
+     led                                       E057      15      21       0   .init       
+     data_in                                   E06C       9       9       0   .init       
+     store_data                                E075       A      10       0   .init       
+     sendI2C                                   E07F      86     134       0   .init       
+     SendData                                  E105      14      20       0   .init       
+     Transfer                                  E119       4       4       0   .init       
+     Nextbit                                   E11D       F      15       0   .init       
+     SendLow                                   E12C       A      10       0   .init       
+     Cont                                      E136      18      24       0   .init       
+     AckPoll                                   E14E      16      22       0   .init       
+     NoAck                                     E164       5       5       0   .init       
+     Startbit                                  E169      10      16       0   .init       
+     Stopbit                                   E179       A      10       0   .init       
+     ShortDelay                                E183       3       3       0   .init       
+     LongDelay                                 E186      38      56       0   .init       
+     Read_byte                                 E1BE       B      11       0   .init       
+     Read_bit                                  E1C9      19      25       0   .init       
+     read_data_skip                            E1E2       1       1       0   .init       
+     read_high                                 E1E3       3       3       0   .init       
+     read_cont                                 E1E6       D      13       0   .init       
+     read_ack                                  E1F3      14      20       0   .init       
+     condition_read_data                       E207      CF     207       0   .init       
+     master_noAck                              E2D6       8       8       0   .init       
+     runA                                      E2DE       6       6       0   .init       
+     runB                                      E2E4       6       6       0   .init       
+     runC                                      E2EA       6       6       0   .init       
+     runD                                      E2F0       6       6       0   .init       
+     poll                                      E2F6      99     153       0   .init       
+     run3                                      E38F       6       6       0   .init       
+     run6                                      E395       6       6       0   .init       
+     run9                                      E39B       6       6       0   .init       
+     runHash                                   E3A1       6       6       0   .init       
+     run1                                      E3A7       6       6       0   .init       
+     run4                                      E3AD       6       6       0   .init       
+     run7                                      E3B3       6       6       0   .init       
+     runStar                                   E3B9       6       6       0   .init       
+     run2                                      E3BF       6       6       0   .init       
+     run5                                      E3C5       6       6       0   .init       
+     run8                                      E3CB       6       6       0   .init       
+     run0                                      E3D1       6       6       0   .init       
+     initLCD                                   E3D7      9D     157       0   .init       
+     lcd_addr                                  E474      17      23       0   .init       
+     lcd_write                                 E48B      13      19       0   .init       
+     clear_LCD                                 E49E      24      36       0   .init       
+     lcd_write_char                            E4C2      1E      30       0   .init       
+     count1reset                               E4E0      1F      31       0   .init       
+     delay                                     E4FF       4       4       0   .init       
+     d                                         E503      30      48       0   .init       
+     delay10                                   E533      40      64       0   .init       
+     char0                                     E573      1B      27       0   .init       
+     char1                                     E58E      1B      27       0   .init       
+     char2                                     E5A9      1B      27       0   .init       
+     char3                                     E5C4      1B      27       0   .init       
+     char4                                     E5DF      1B      27       0   .init       
+     char5                                     E5FA      1B      27       0   .init       
+     char6                                     E615      1B      27       0   .init       
+     char7                                     E630      1B      27       0   .init       
+     char8                                     E64B      1B      27       0   .init       
+     char9                                     E666      1B      27       0   .init       
+     charA                                     E681      13      19       0   .init       
+     charB                                     E694      19      25       0   .init       
+     charC                                     E6AD      13      19       0   .init       
+     charD                                     E6C0      13      19       0   .init       
+     charE                                     E6D3      13      19       0   .init       
+     charF                                     E6E6      13      19       0   .init       
+- VARIABLES:
+     value                                       60       1       1       0   .text       
+     count0                                      61       1       1       0   .text       
+     count1                                      62       1       1       0   .text       
+     ledVal1                                     63       1       1       0   .text       
+     ledVal2                                     64       1       1       0   .text       
+     datacheck                                   65       1       1       0   .text       
+     data_count                                  66       1       1       0   .text       
+     BitCounter                                  67       1       1       0   .text       
+     DataCounter                                 68       1       1       0   .text       
+     temp_data                                   69       1       1       0   .text       
+     seconds                                     6A       1       1       0   .text       
+     minutes                                     6B       1       1       0   .text       
+     hours                                       6C       1       1       0   .text       
+     date                                        6D       1       1       0   .text       
+     month                                       6E       1       1       0   .text       
+     year                                        6F       1       1       0   .text       
+     input_boolean                               70       1       1       0   .text       
+     read_bit_counter                            71       1       1       0   .text       
+     input_boolean_timer                         72       1       1       0   .text       
+     Data_in_Counter                             73       1       1       0   .text       
+     READ_DATA                                   74       7       7       0   .text       
+     data                                        7B      18      24       0   .text       
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main_asm.obj                                51   1785      0
+  other                                       64      4      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  value count0 count1 ledVal1 ledVal2 datacheck data_count BitCounter 
+  DataCounter temp_data seconds minutes hours date month year input_boolean 
+  read_bit_counter input_boolean_timer Data_in_Counter READ_DATA data 
+SECTION: ".init"
+  main _Startup mainLoop interrupt toggle led data_in store_data sendI2C 
+  SendData Transfer Nextbit SendLow Cont AckPoll NoAck Startbit Stopbit 
+  ShortDelay LongDelay Read_byte Read_bit read_data_skip read_high read_cont 
+  read_ack condition_read_data master_noAck runA runB runC runD poll run3 run6 
+  run9 runHash run1 run4 run7 runStar run2 run5 run8 run0 initLCD lcd_addr 
+  lcd_write clear_LCD lcd_write_char count1reset delay d delay10 char0 char1 
+  char2 char3 char4 char5 char6 char7 char8 char9 charA charB charC charD charE 
+  charF 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     value                                       60       1       1       0   .text       
+     count0                                      61       1       1       0   .text       
+     count1                                      62       1       1       0   .text       
+     ledVal1                                     63       1       1       0   .text       
+     ledVal2                                     64       1       1       0   .text       
+     datacheck                                   65       1       1       0   .text       
+     data_count                                  66       1       1       0   .text       
+     BitCounter                                  67       1       1       0   .text       
+     DataCounter                                 68       1       1       0   .text       
+     temp_data                                   69       1       1       0   .text       
+     seconds                                     6A       1       1       0   .text       
+     minutes                                     6B       1       1       0   .text       
+     hours                                       6C       1       1       0   .text       
+     date                                        6D       1       1       0   .text       
+     month                                       6E       1       1       0   .text       
+     year                                        6F       1       1       0   .text       
+     input_boolean                               70       1       1       0   .text       
+     read_bit_counter                            71       1       1       0   .text       
+     input_boolean_timer                         72       1       1       0   .text       
+     Data_in_Counter                             73       1       1       0   .text       
+     READ_DATA                                   74       7       7       0   .text       
+     data                                        7B      18      24       0   .text       
+     main                                      E000       0       0       0   .init       
+     _Startup                                  E000      31      49       0   .init       
+     mainLoop                                  E031      11      17       0   .init       
+     interrupt                                 E042       A      10       0   .init       
+     toggle                                    E04C       B      11       0   .init       
+     led                                       E057      15      21       0   .init       
+     data_in                                   E06C       9       9       0   .init       
+     store_data                                E075       A      10       0   .init       
+     sendI2C                                   E07F      86     134       0   .init       
+     SendData                                  E105      14      20       0   .init       
+     Transfer                                  E119       4       4       0   .init       
+     Nextbit                                   E11D       F      15       0   .init       
+     SendLow                                   E12C       A      10       0   .init       
+     Cont                                      E136      18      24       0   .init       
+     AckPoll                                   E14E      16      22       0   .init       
+     NoAck                                     E164       5       5       0   .init       
+     Startbit                                  E169      10      16       0   .init       
+     Stopbit                                   E179       A      10       0   .init       
+     ShortDelay                                E183       3       3       0   .init       
+     LongDelay                                 E186      38      56       0   .init       
+     Read_byte                                 E1BE       B      11       0   .init       
+     Read_bit                                  E1C9      19      25       0   .init       
+     read_data_skip                            E1E2       1       1       0   .init       
+     read_high                                 E1E3       3       3       0   .init       
+     read_cont                                 E1E6       D      13       0   .init       
+     read_ack                                  E1F3      14      20       0   .init       
+     condition_read_data                       E207      CF     207       0   .init       
+     master_noAck                              E2D6       8       8       0   .init       
+     runA                                      E2DE       6       6       0   .init       
+     runB                                      E2E4       6       6       0   .init       
+     runC                                      E2EA       6       6       0   .init       
+     runD                                      E2F0       6       6       0   .init       
+     poll                                      E2F6      99     153       0   .init       
+     run3                                      E38F       6       6       0   .init       
+     run6                                      E395       6       6       0   .init       
+     run9                                      E39B       6       6       0   .init       
+     runHash                                   E3A1       6       6       0   .init       
+     run1                                      E3A7       6       6       0   .init       
+     run4                                      E3AD       6       6       0   .init       
+     run7                                      E3B3       6       6       0   .init       
+     runStar                                   E3B9       6       6       0   .init       
+     run2                                      E3BF       6       6       0   .init       
+     run5                                      E3C5       6       6       0   .init       
+     run8                                      E3CB       6       6       0   .init       
+     run0                                      E3D1       6       6       0   .init       
+     initLCD                                   E3D7      9D     157       0   .init       
+     lcd_addr                                  E474      17      23       0   .init       
+     lcd_write                                 E48B      13      19       0   .init       
+     clear_LCD                                 E49E      24      36       0   .init       
+     lcd_write_char                            E4C2      1E      30       0   .init       
+     count1reset                               E4E0      1F      31       0   .init       
+     delay                                     E4FF       4       4       0   .init       
+     d                                         E503      30      48       0   .init       
+     delay10                                   E533      40      64       0   .init       
+     char0                                     E573      1B      27       0   .init       
+     char1                                     E58E      1B      27       0   .init       
+     char2                                     E5A9      1B      27       0   .init       
+     char3                                     E5C4      1B      27       0   .init       
+     char4                                     E5DF      1B      27       0   .init       
+     char5                                     E5FA      1B      27       0   .init       
+     char6                                     E615      1B      27       0   .init       
+     char7                                     E630      1B      27       0   .init       
+     char8                                     E64B      1B      27       0   .init       
+     char9                                     E666      1B      27       0   .init       
+     charA                                     E681      13      19       0   .init       
+     charB                                     E694      19      25       0   .init       
+     charC                                     E6AD      13      19       0   .init       
+     charD                                     E6C0      13      19       0   .init       
+     charE                                     E6D3      13      19       0   .init       
+     charF                                     E6E6      13      19       0   .init       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+      
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 1789
+

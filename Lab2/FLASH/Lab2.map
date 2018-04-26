@@ -1,0 +1,207 @@
+*** EVALUATION ***
+PROGRAM "Lab2.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.51 Build 14019, Jan 20 2014
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main_asm.obj                            Model: SMALL,         Lang: Assembler
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE000 (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+main_asm__ORG00001                 5   R/W       0x60       0x64   .absSeg0
+main_asm__ORG00002              1036     R     0xE000     0xE40B   .absSeg1
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg2_vect                     2     R     0xFFE6     0xFFE7   .vectSeg2
+.vectSeg3_vect                     2     R     0xFFFE     0xFFFF   .vectSeg3
+
+Summary of section sizes per section type:
+READ_ONLY (R):         410 (dec:     1040)
+READ_WRITE (R/W):       45 (dec:       69)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFE6        0xE03F   interrupt
+     0xFFFE        0xE000   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main_asm.obj --
+- PROCEDURES:
+     _Startup                                  E000      31      49       0   .init       
+     main                                      E000       0       0       0   .init       
+     mainLoop                                  E031       E      14       0   .init       
+     interrupt                                 E03F       A      10       0   .init       
+     toggle                                    E049       B      11       0   .init       
+     led                                       E054      15      21       0   .init       
+     runA                                      E069       5       5       0   .init       
+     runB                                      E06E       5       5       0   .init       
+     runC                                      E073       5       5       0   .init       
+     runD                                      E078       5       5       0   .init       
+     poll                                      E07D      99     153       0   .init       
+     run3                                      E116       6       6       0   .init       
+     run6                                      E11C       6       6       0   .init       
+     run9                                      E122       6       6       0   .init       
+     runHash                                   E128       6       6       0   .init       
+     run1                                      E12E       6       6       0   .init       
+     run4                                      E134       6       6       0   .init       
+     run7                                      E13A       6       6       0   .init       
+     runStar                                   E140       6       6       0   .init       
+     run2                                      E146       6       6       0   .init       
+     run5                                      E14C       6       6       0   .init       
+     run8                                      E152       6       6       0   .init       
+     run0                                      E158       6       6       0   .init       
+     initLCD                                   E15E      9D     157       0   .init       
+     lcd_addr                                  E1FB      17      23       0   .init       
+     lcd_write                                 E212      13      19       0   .init       
+     lcd_write_char                            E225      1E      30       0   .init       
+     count1reset                               E243      1F      31       0   .init       
+     delay                                     E262       4       4       0   .init       
+     d                                         E266      30      48       0   .init       
+     delay10                                   E296      40      64       0   .init       
+     char0                                     E2D6      13      19       0   .init       
+     char1                                     E2E9      13      19       0   .init       
+     char2                                     E2FC      13      19       0   .init       
+     char3                                     E30F      13      19       0   .init       
+     char4                                     E322      13      19       0   .init       
+     char5                                     E335      13      19       0   .init       
+     char6                                     E348      13      19       0   .init       
+     char7                                     E35B      13      19       0   .init       
+     char8                                     E36E      13      19       0   .init       
+     char9                                     E381      13      19       0   .init       
+     charA                                     E394      13      19       0   .init       
+     charB                                     E3A7      19      25       0   .init       
+     charC                                     E3C0      13      19       0   .init       
+     charD                                     E3D3      13      19       0   .init       
+     charE                                     E3E6      13      19       0   .init       
+     charF                                     E3F9      13      19       0   .init       
+- VARIABLES:
+     value                                       60       1       1       0   .text       
+     count0                                      61       1       1       0   .text       
+     count1                                      62       1       1       0   .text       
+     ledVal1                                     63       1       1       0   .text       
+     ledVal2                                     64       1       1       0   .text       
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main_asm.obj                                 5   1036      0
+  other                                       64      4      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  value count0 count1 ledVal1 ledVal2 
+SECTION: ".init"
+  main _Startup mainLoop interrupt toggle led runA runB runC runD poll run3 
+  run6 run9 runHash run1 run4 run7 runStar run2 run5 run8 run0 initLCD lcd_addr 
+  lcd_write lcd_write_char count1reset delay d delay10 char0 char1 char2 char3 
+  char4 char5 char6 char7 char8 char9 charA charB charC charD charE charF 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     value                                       60       1       1       0   .text       
+     count0                                      61       1       1       0   .text       
+     count1                                      62       1       1       0   .text       
+     ledVal1                                     63       1       1       0   .text       
+     ledVal2                                     64       1       1       0   .text       
+     main                                      E000       0       0       0   .init       
+     _Startup                                  E000      31      49       0   .init       
+     mainLoop                                  E031       E      14       0   .init       
+     interrupt                                 E03F       A      10       0   .init       
+     toggle                                    E049       B      11       0   .init       
+     led                                       E054      15      21       0   .init       
+     runA                                      E069       5       5       0   .init       
+     runB                                      E06E       5       5       0   .init       
+     runC                                      E073       5       5       0   .init       
+     runD                                      E078       5       5       0   .init       
+     poll                                      E07D      99     153       0   .init       
+     run3                                      E116       6       6       0   .init       
+     run6                                      E11C       6       6       0   .init       
+     run9                                      E122       6       6       0   .init       
+     runHash                                   E128       6       6       0   .init       
+     run1                                      E12E       6       6       0   .init       
+     run4                                      E134       6       6       0   .init       
+     run7                                      E13A       6       6       0   .init       
+     runStar                                   E140       6       6       0   .init       
+     run2                                      E146       6       6       0   .init       
+     run5                                      E14C       6       6       0   .init       
+     run8                                      E152       6       6       0   .init       
+     run0                                      E158       6       6       0   .init       
+     initLCD                                   E15E      9D     157       0   .init       
+     lcd_addr                                  E1FB      17      23       0   .init       
+     lcd_write                                 E212      13      19       0   .init       
+     lcd_write_char                            E225      1E      30       0   .init       
+     count1reset                               E243      1F      31       0   .init       
+     delay                                     E262       4       4       0   .init       
+     d                                         E266      30      48       0   .init       
+     delay10                                   E296      40      64       0   .init       
+     char0                                     E2D6      13      19       0   .init       
+     char1                                     E2E9      13      19       0   .init       
+     char2                                     E2FC      13      19       0   .init       
+     char3                                     E30F      13      19       0   .init       
+     char4                                     E322      13      19       0   .init       
+     char5                                     E335      13      19       0   .init       
+     char6                                     E348      13      19       0   .init       
+     char7                                     E35B      13      19       0   .init       
+     char8                                     E36E      13      19       0   .init       
+     char9                                     E381      13      19       0   .init       
+     charA                                     E394      13      19       0   .init       
+     charB                                     E3A7      19      25       0   .init       
+     charC                                     E3C0      13      19       0   .init       
+     charD                                     E3D3      13      19       0   .init       
+     charE                                     E3E6      13      19       0   .init       
+     charF                                     E3F9      13      19       0   .init       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+      
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 1040
+
